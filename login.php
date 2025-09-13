@@ -9,11 +9,20 @@ if (isset($_SESSION['delete_msg'])) {
     $msg = $_SESSION['passwordchange'];
     echo "<script>alert('" . addslashes($msg) . "');</script>";
     unset($_SESSION['passwordchange']);
-    
 }elseif(isset($_SESSION['chekyourmail'])){
     $msg = $_SESSION['chekyourmail'];
     echo "<script>alert('" . addslashes($msg) . "');</script>";
     unset($_SESSION['chekyourmail']);
+    
+}elseif(isset($_SESSION['passwordmatch'])){
+    $msg = $_SESSION['passwordmatch'];
+    echo "<script>alert('" . addslashes($msg) . "');</script>";
+    unset($_SESSION['passwordmatch']);
+    
+}elseif(isset($_SESSION['tokenExist'])){
+    $msg = $_SESSION['tokenExist'];
+    echo "<script>alert('" . addslashes($msg) . "');</script>";
+    unset($_SESSION['tokenExist']);
     
 }
 ?>

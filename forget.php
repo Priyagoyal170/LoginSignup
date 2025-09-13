@@ -9,11 +9,6 @@ if (isset($_SESSION['delete_msg'])) {
 
 session_destroy();
 ?>
-    
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>

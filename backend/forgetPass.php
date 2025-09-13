@@ -10,13 +10,13 @@ session_start();
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST'){
   $email = $_POST['email'];
-
-
+  
   $tokenExist = "SELECT * FROM forgetpass WHERE email='$email'";
   $tokenResult = mysqli_query($conn,$tokenExist); 
   if(mysqli_num_rows($tokenResult) > 0){
-        $_SESSION['tokenExist'] = "Reset Password Link has been sent on your email";
+        $_SESSION['tokenExist'] = "Reset Password Link has been already sent on your email";
         header("Location: ../login.php");
+        exit();
   }
 
 
